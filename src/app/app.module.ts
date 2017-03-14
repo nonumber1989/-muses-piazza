@@ -1,5 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+// import { TranslateModule } from 'ng2-translate/ng2-translate';
+
 import { MusesPiazza } from './app.component';
 import { MenuPage } from '../pages/menu/menu';
 import { DiscoverPage } from '../pages/discover/discover';
@@ -23,6 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage
   ],
   imports: [
+    // TranslateModule.forRoot(),
     IonicModule.forRoot(MusesPiazza)
   ],
   bootstrap: [IonicApp],
