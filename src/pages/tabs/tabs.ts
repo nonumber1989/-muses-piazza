@@ -5,7 +5,7 @@ import { MenuPage } from '../menu/menu';
 import { DiscoverPage } from '../discover/discover';
 import { NotificationPage } from '../notification/notification';
 import { ContactPage } from '../contact/contact';
-
+import { NavigationPage } from '../navigation/navigation';
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -17,6 +17,7 @@ export class TabsPage {
   DiscoverRoot:any = DiscoverPage;
   ContactRoot: any = ContactPage;
   NotificationRoot: any = NotificationPage;
+  NavigationRoot:any = NavigationPage;
   constructor() {
 
   }
