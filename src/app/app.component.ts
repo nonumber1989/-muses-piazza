@@ -17,8 +17,13 @@ export class MusesPiazza {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
-      //lock orientation
-      ScreenOrientation.lockOrientation('portrait');
+      //lock orientation,there is bug 
+      // ScreenOrientation.lockOrientation('portrait');
+
+      if (platform.is('cordova')) {
+           ScreenOrientation.lockOrientation('portrait');
+        }
+
     });
   }
 }
