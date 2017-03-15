@@ -1,12 +1,37 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-            Notification
-        </ion-title>
-    </ion-navbar>
-</ion-header>
+<!-- <ion-content> -->
+ 
 
-<ion-content>
- <h1>I am Notification</h1>
- <button ion-button color="danger" (click)="test()">Danger</button>
-</ion-content>
+<div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="kittens">
+      Kittens
+    </ion-segment-button>
+    <ion-segment-button value="puppies">
+      Puppies
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item>
+      <ion-thumbnail item-left>
+          <img src="assets/img/card-saopaolo.png" />
+      </ion-thumbnail>
+      <h2>Ruby</h2>
+    </ion-item>
+    <button ion-button color="danger" (click)="test()">Danger</button>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'kittens'">
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/img/card-madison.png" />
+      </ion-thumbnail>
+      <h2>Luna</h2>
+    </ion-item>
+    ...
+  </ion-list>
+</div>
+
+<!-- </ion-content> -->
