@@ -13,16 +13,14 @@ export class MusesPiazza {
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
-      //lock orientation,there is bug 
-      // ScreenOrientation.lockOrientation('portrait');
-
       if (platform.is('cordova')) {
-           ScreenOrientation.lockOrientation('portrait');
-        }
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+        StatusBar.styleDefault();
+        Splashscreen.hide();
+        //lock orientation
+        ScreenOrientation.lockOrientation('portrait');
+      }
 
     });
   }
