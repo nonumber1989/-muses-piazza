@@ -1,7 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { MusesPiazza } from './app.component';
 import { MenuPage } from '../pages/menu/menu';
 import { DiscoverPage } from '../pages/discover/discover';
@@ -13,7 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 export function musesPiazzaTranslateLoader(http: Http) {
-  return new TranslateStaticLoader(http, './assets/i18n', '.json');
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -31,9 +32,11 @@ export function musesPiazzaTranslateLoader(http: Http) {
   imports: [
     HttpModule,
     TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (musesPiazzaTranslateLoader),
-      deps: [Http]
+       loader: {
+          provide: TranslateLoader,
+          useFactory: (musesPiazzaTranslateLoader),
+          deps: [Http]
+            }
     }),
     IonicModule.forRoot(MusesPiazza)
   ],

@@ -1,18 +1,4 @@
 {
-  "HOME": {
-    "TITLE": "这是Angular treanslate的子类",
-    "SELECT": "改变语言"
-  },
-  "ABOUT": {
-    "TITLE": "关于"
-  },
-  "CONTACT": {
-    "TITLE": "来纳西人",
-    "TWITTER_MESSAGE": "跟着我们"
-  },
-  "TABS": {
-    "HOME": "主页",
-    "ABOUT": "关于",
-    "CONTACT": "联系人"
-  }
+  "ABOUT":  "更欢迎",
+  "CONTACT":  "模具"
 }
