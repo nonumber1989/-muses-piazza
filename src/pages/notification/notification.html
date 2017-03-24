@@ -5,9 +5,10 @@
   <ion-segment [(ngModel)]="pet">
     <ion-segment-button value="kittens">
       Kittens
+      {{ 'ABOUT' | translate }}
     </ion-segment-button>
     <ion-segment-button value="puppies">
-      Puppies
+      Puppies {{ 'ABOUT' | translate }}
     </ion-segment-button>
   </ion-segment>
 </div>

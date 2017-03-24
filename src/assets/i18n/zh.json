@@ -1,4 +1,19 @@
 {
-  "ABOUT":  "更欢迎",
-  "CONTACT":  "模具"
+  "HOME": {
+    "TITLE": "首页",
+    "SELECT": "改变语言"
+  },
+  "DISCOVER": {
+    "TITLE": "发现"
+  },
+  "NOTIFICATION": {
+    "TITLE": "消息",
+    "TWITTER_MESSAGE": "跟着我们"
+  },
+  "TABS": {
+    "HOME": "首页",
+    "DISCOVER": "发现",
+    "NOTIFICATION": "消息",
+    "CONFIGURATION": "我的"
+  }
 }

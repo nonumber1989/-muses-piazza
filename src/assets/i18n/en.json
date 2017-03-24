@@ -1,4 +1,19 @@
 {
-  "ABOUT":  "About",
-  "CONTACT":  "Contact"
+  "HOME": {
+    "TITLE": "Home",
+    "SELECT": "改变语言"
+  },
+  "DISCOVER": {
+    "TITLE": "Discover"
+  },
+  "NOTIFICATION": {
+    "TITLE": "Notification",
+    "TWITTER_MESSAGE": "跟着我们"
+  },
+  "TABS": {
+    "HOME": "Home",
+    "DISCOVER": "Discover",
+    "NOTIFICATION": "Notifications",
+    "CONFIGURATION": "You"
+  }
 }
