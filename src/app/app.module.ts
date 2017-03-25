@@ -14,7 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 export function musesPiazzaTranslateLoader(http: Http) {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -34,7 +34,7 @@ export function musesPiazzaTranslateLoader(http: Http) {
     TranslateModule.forRoot({
        loader: {
           provide: TranslateLoader,
-          useFactory: (musesPiazzaTranslateLoader),
+          useFactory: musesPiazzaTranslateLoader,
           deps: [Http]
             }
     }),
