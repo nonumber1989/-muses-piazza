@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MusesPiazza } from './app.component';
 import { MenuPage } from '../pages/menu/menu';
 import { DiscoverPage } from '../pages/discover/discover';
@@ -10,8 +10,14 @@ import { NotificationPage } from '../pages/notification/notification';
 import { NavigationPage } from '../pages/navigation/navigation';
 import { NavigationDetailsPage } from '../pages/navigation/navigationDetails';
 import { ContactPage } from '../pages/contact/contact';
+import { ProfilePage } from '../pages/profile/profile';
+import { SigninPage } from '../pages/signin/signin';
+import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { ArtifactData } from '../providers/artifact-data';
+import { ProfileData } from '../providers/profile-data';
 
 export function musesPiazzaTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,17 +32,20 @@ export function musesPiazzaTranslateLoader(http: Http) {
     NavigationPage,
     NavigationDetailsPage,
     ContactPage,
+    ProfilePage,
+    SigninPage,
+    SignupPage,
     HomePage,
     TabsPage
   ],
   imports: [
     HttpModule,
     TranslateModule.forRoot({
-       loader: {
-          provide: TranslateLoader,
-          useFactory: musesPiazzaTranslateLoader,
-          deps: [Http]
-            }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: musesPiazzaTranslateLoader,
+        deps: [Http]
+      }
     }),
     IonicModule.forRoot(MusesPiazza)
   ],
@@ -49,9 +58,16 @@ export function musesPiazzaTranslateLoader(http: Http) {
     NavigationPage,
     NavigationDetailsPage,
     ContactPage,
+    ProfilePage,
+    SigninPage,
+    SignupPage,
     HomePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ArtifactData,
+    ProfileData
+  ]
 })
-export class AppModule {}
+export class AppModule { }

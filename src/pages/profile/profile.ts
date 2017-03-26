@@ -1,18 +1,34 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { SigninPage } from '../signin/signin';
+import { SignupPage } from '../signup/signup';
+
+import { ProfileData } from '../../providers/profile-data';
+
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html'
+	selector: 'page-profile',
+	templateUrl: 'profile.html'
 })
 export class ProfilePage {
+	profile: any[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		public profileData: ProfileData
+	) { }
+
+	ionViewDidLoad() {
+		this.profileData.getProfiles().subscribe((profiles: any[]) => {
+			this.profile = profiles[0];
+		});
+	}
+   
+   goToSignin() {
+    this.navCtrl.push(SigninPage);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+   goToSignup() {
+    this.navCtrl.push(SignupPage);
   }
-
 }
