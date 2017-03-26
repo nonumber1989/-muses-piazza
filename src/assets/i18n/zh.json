@@ -6,7 +6,9 @@
         "TITLE": "发现"
     },
     "NOTIFICATION": {
-        "TITLE": "消息"
+        "TITLE": "通知",
+        "MESSAGE":"消息",
+        "FOLLOWING":"关注"
     },
     "CONFIGURATION": {
         "TITLE": "你的",
@@ -17,7 +19,7 @@
     "TABS": {
         "HOME": "首页",
         "DISCOVER": "发现",
-        "NOTIFICATION": "消息",
+        "NOTIFICATION": "通知",
         "CONFIGURATION": "我的"
     }
 }

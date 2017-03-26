@@ -13,6 +13,10 @@ export class NotificationPage {
 
   }
 
+  swithNotification() {
+    
+  }
+
   test(){
   	ImagePicker.getPictures({}).then((results) => {
   for (var i = 0; i < results.length; i++) {

@@ -6,7 +6,9 @@
         "TITLE": "Discover"
     },
     "NOTIFICATION": {
-        "TITLE": "Notifications"
+        "TITLE": "Notifications",
+        "MESSAGE":"Message",
+        "FOLLOWING":"Following"
     },
     "CONFIGURATION": {
         "TITLE": "You",

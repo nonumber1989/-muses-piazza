@@ -1,38 +1,46 @@
-<!-- <ion-content> -->
- 
-
-<div padding>
-  <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      Kittens
-      {{ 'ABOUT' | translate }}
-    </ion-segment-button>
-    <ion-segment-button value="puppies">
-      Puppies {{ 'ABOUT' | translate }}
-    </ion-segment-button>
-  </ion-segment>
-</div>
-
-<div [ngSwitch]="pet">
-  <ion-list *ngSwitchCase="'puppies'">
-    <ion-item>
-      <ion-thumbnail item-left>
-          <img src="assets/img/card-saopaolo.png" />
-      </ion-thumbnail>
-      <h2>Ruby</h2>
-    </ion-item>
-    <button ion-button color="danger" (click)="test()">Danger</button>
-  </ion-list>
-
-  <ion-list *ngSwitchCase="'kittens'">
-    <ion-item>
-      <ion-thumbnail item-left>
-        <img src="assets/img/card-madison.png" />
-      </ion-thumbnail>
-      <h2>Luna</h2>
-    </ion-item>
-    ...
-  </ion-list>
-</div>
-
-<!-- </ion-content> -->
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-segment [(ngModel)]="notification" (ionChange)="swithNotification()">
+            <ion-segment-button value="message">
+                {{ 'NOTIFICATION.MESSAGE' | translate }}
+            </ion-segment-button>
+            <ion-segment-button value="following">
+                {{ 'NOTIFICATION.FOLLOWING' | translate }}
+            </ion-segment-button>
+        </ion-segment>
+    </ion-navbar>
+</ion-header>
+<ion-content [ngSwitch]="notification">
+    <ion-list *ngSwitchCase="'message'">
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="assets/img/card-saopaolo.png" />
+            </ion-thumbnail>
+            <h2>Ruby</h2>
+        </ion-item>
+        <button ion-button color="danger" (click)="test()">Danger</button>
+    </ion-list>
+    <ion-list *ngSwitchCase="'following'">
+        <ion-item-sliding>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="assets/img/card-saopaolo.png">
+                </ion-avatar>
+                <h2>Slimer</h2>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="primary">
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button ion-button color="secondary">
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
