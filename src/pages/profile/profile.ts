@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { SigninPage } from '../signin/signin';
-import { SignupPage } from '../signup/signup';
 
 import { ProfileData } from '../../providers/profile-data';
 
@@ -29,6 +28,5 @@ export class ProfilePage {
     this.navCtrl.push(SigninPage);
   }
    goToSignup() {
-    this.navCtrl.push(SignupPage);
   }
 }

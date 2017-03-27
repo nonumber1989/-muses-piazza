@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController } from 'ionic-angular';
+import { ViewController,NavController ,NavParams} from 'ionic-angular';
 
 import { SignupPage } from '../signup/signup';
 import { TabsPage } from '../tabs/tabs';
@@ -15,7 +15,11 @@ export class SigninPage {
 	login: { username?: string, password?: string } = {};
 	submitted = false;
 
-	constructor(public navCtrl: NavController) { }
+	constructor(
+		public params: NavParams,
+		public viewCtrl: ViewController,
+		public navCtrl: NavController
+	) { }
 
 	onLogin(form: NgForm) {
 		this.submitted = true;
@@ -28,4 +32,9 @@ export class SigninPage {
 	onSignup() {
 		this.navCtrl.push(SignupPage);
 	}
+
+	  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+  
 }
