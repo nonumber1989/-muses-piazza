@@ -1,4 +1,9 @@
 {
+    "COMMON": {
+        "SIGNIN": "SignIn",
+        "SIGNUP": "SignUp",
+        "SIGNOUT": "SignOut"
+    },
     "HOME": {
         "TITLE": "Home"
     },
@@ -7,14 +12,15 @@
     },
     "NOTIFICATION": {
         "TITLE": "Notifications",
-        "MESSAGE":"Message",
-        "FOLLOWING":"Following"
+        "MESSAGE": "Message",
+        "FOLLOWING": "Following"
     },
     "CONFIGURATION": {
         "TITLE": "You",
         "FAVORITE": "Favorite",
         "FOLLOWING": "Following",
-        "DRAFT": "Draft"
+        "DRAFT": "Draft",
+        "SLOGAN": "SignIn,Find more features"
     },
     "TABS": {
         "HOME": "Home",

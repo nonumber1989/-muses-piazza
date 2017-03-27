@@ -1,4 +1,9 @@
 {
+    "COMMON":{
+        "SIGNIN":"登录",
+        "SIGNUP":"注册",
+        "SIGNOUT":"登出"
+    },
     "HOME": {
         "TITLE": "首页"
     },
@@ -14,7 +19,8 @@
         "TITLE": "你的",
         "FAVORITE": "收藏",
         "FOLLOWING": "关注",
-        "DRAFT":"草稿"
+        "DRAFT":"草稿",
+        "SLOGAN":"登录,体验更多功能"
     },
     "TABS": {
         "HOME": "首页",
