@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ModalController, Platform, NavParams, ViewController,NavController } from 'ionic-angular';
+import { ModalController, Platform, NavParams, ViewController, NavController } from 'ionic-angular';
 
 import { SignupPage } from '../signup/signup';
 import { SigninPage } from '../signin/signin';
@@ -12,18 +12,18 @@ import { ProfilePage } from '../profile/profile';
 })
 export class MenuPage {
 
-	constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
+	constructor(public modalCtrl: ModalController, public navCtrl: NavController) {
 
 	}
 
-  openModal(characterNum) {
-    let modal = this.modalCtrl.create(SigninPage, characterNum);
-    modal.present();
-  }
-
 	goToSignin() {
-		// this.navCtrl.setRoot(SignupPage);
-		this.navCtrl.push(SignupPage);
+		let signinModal = this.modalCtrl.create(SigninPage);
+		signinModal.present();
+	}
+
+	goToSignup() {
+		let signupModal = this.modalCtrl.create(SignupPage);
+		signupModal.present();
 	}
 
 	goToProfile() {

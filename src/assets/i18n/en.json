@@ -2,7 +2,9 @@
     "COMMON": {
         "SIGNIN": "SignIn",
         "SIGNUP": "SignUp",
-        "SIGNOUT": "SignOut"
+        "SIGNOUT": "SignOut",
+        "USERNAME":"Username",
+        "PASSWORD":"Password"
     },
     "HOME": {
         "TITLE": "Home"

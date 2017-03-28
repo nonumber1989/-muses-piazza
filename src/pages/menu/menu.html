@@ -6,36 +6,15 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-
-  <ion-list>
-    <ion-list-header>
-      Hobbits
-    </ion-list-header>
-    <a ion-item (click)="openModal({charNum: 0})">
-      Gollum
-    </a>
-    <a ion-item (click)="openModal({charNum: 1})">
-      Frodo Baggins
-    </a>
-    <a ion-item (click)="openModal({charNum: 2})">
-      Sam
-    </a>
-  </ion-list>
-
-
-  
     <ion-card>
         <ion-card-content text-center>
             <h1>{{ 'CONFIGURATION.SLOGAN' | translate }}</h1>
-            <button ion-button outline (click)="goToSignin()">{{ 'COMMON.SIGNUP' | translate }}</button>
+            <button ion-button outline (click)="goToSignup()">{{ 'COMMON.SIGNUP' | translate }}</button>
             <button ion-button outline color="secondary" (click)="goToSignin()">{{ 'COMMON.SIGNIN' | translate }}</button>
         </ion-card-content>
     </ion-card>
     <ion-card>
         <ion-item (click)="goToProfile()">
-            <ion-avatar item-left>
-                <img src="assets/img/marty-avatar.png">
-            </ion-avatar>
             <h2>Marty McFly</h2>
             <p>November 5, 1955</p>
         </ion-item>

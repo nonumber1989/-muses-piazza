@@ -33,8 +33,8 @@ export class SigninPage {
 		this.navCtrl.push(SignupPage);
 	}
 
-	  dismiss() {
-    this.viewCtrl.dismiss();
-  }
+	dismiss() {
+		this.viewCtrl.dismiss();
+	}
   
 }
