@@ -27,14 +27,8 @@ export class ArtifactData {
 		return this.artifacts;
 	}
 
-	getSpeakers() {
-		return this.load().map((data: any) => {
-			return data.speakers.sort((a: any, b: any) => {
-				let aName = a.name.split(' ').pop();
-				let bName = b.name.split(' ').pop();
-				return aName.localeCompare(bName);
-			});
-		});
+	getArtifacts() {
+		return this.load();
 	}
 
 }
