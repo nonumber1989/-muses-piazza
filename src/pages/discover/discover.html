@@ -6,21 +6,18 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-
-
-<ion-slides >
-    <ion-slide *ngFor="let slide of slides">
-<!--       <ion-toolbar>
+    <ion-slides>
+        <ion-slide *ngFor="let slide of slides">
+            <!--       <ion-toolbar>
         <ion-buttons end>
           <button ion-button color="primary">Skip</button>
         </ion-buttons>
       </ion-toolbar> -->
-      <img [src]="slide.image" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
-
-    </ion-slide> 
-<!--     <ion-slide>
+            <img [src]="slide.image" class="slide-image" />
+            <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+        </ion-slide>
+        <!--     <ion-slide>
       <ion-toolbar>
       </ion-toolbar>
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
@@ -30,9 +27,7 @@
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-slide> -->
-  </ion-slides>
-
-
+    </ion-slides>
     <p style="text-align:center">
         <ion-chip>
             <ion-label>Default</ion-label>
@@ -55,98 +50,21 @@
             <ion-label>Default</ion-label>
         </ion-chip>
     </p>
-    <ion-card>
-        <img src="assets/img/bjork-live.jpg" />
+    <ion-card *ngFor="let discovery of discoveries">
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img/marty-avatar.png">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>November 5, 1955</p>
+        </ion-item>
+        <img [src]="discovery.image" />
         <ion-card-content>
             <ion-card-title>
-                Björk
+                {{discovery.title}}
             </ion-card-title>
             <p>
-                Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
-            </p>
-        </ion-card-content>
-        <ion-item>
-            <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
-            Albums
-            <ion-badge item-right>9</ion-badge>
-        </ion-item>
-        <ion-item>
-            <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
-            Followers
-            <ion-badge item-right>260k</ion-badge>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <img src="assets/img/bjork-live.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Björk
-            </ion-card-title>
-            <p>
-                Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
-            </p>
-        </ion-card-content>
-        <ion-item>
-            <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
-            Albums
-            <ion-badge item-right>9</ion-badge>
-        </ion-item>
-        <ion-item>
-            <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
-            Followers
-            <ion-badge item-right>260k</ion-badge>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <img src="assets/img/bjork-live.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Björk
-            </ion-card-title>
-            <p>
-                Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
-            </p>
-        </ion-card-content>
-        <ion-item>
-            <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
-            Albums
-            <ion-badge item-right>9</ion-badge>
-        </ion-item>
-        <ion-item>
-            <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
-            Followers
-            <ion-badge item-right>260k</ion-badge>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <img src="assets/img/bjork-live.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Björk
-            </ion-card-title>
-            <p>
-                Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
-            </p>
-        </ion-card-content>
-        <ion-item>
-            <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
-            Albums
-            <ion-badge item-right>9</ion-badge>
-        </ion-item>
-        <ion-item>
-            <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
-            Followers
-            <ion-badge item-right>260k</ion-badge>
-        </ion-item>
-    </ion-card>
-    <ion-card>
-        <img src="assets/img/bjork-live.jpg" />
-        <ion-card-content>
-            <ion-card-title>
-                Björk
-            </ion-card-title>
-            <p>
-                Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
+                {{discovery.description}}
             </p>
         </ion-card-content>
         <ion-item>

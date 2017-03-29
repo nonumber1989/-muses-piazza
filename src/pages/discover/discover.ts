@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { DiscoveryData } from '../../providers/discovery-data';
+
 @Component({
-  selector: 'page-discover',
-  templateUrl: 'discover.html'
+	selector: 'page-discover',
+	templateUrl: 'discover.html'
 })
 export class DiscoverPage {
+	discoveries: any[] = [];
 
 	slides = [
 		{
@@ -25,9 +28,16 @@ export class DiscoverPage {
 			image: "assets/img/card-sf.png",
 		}
 	];
-	
-  constructor(public navCtrl: NavController) {
 
-  }
+	constructor(
+		public navCtrl: NavController,
+		public discoveryData: DiscoveryData
+	) { }
+
+	ionViewDidLoad() {
+		this.discoveryData.getDiscoveries().subscribe((discoveries: any[]) => {
+			this.discoveries = discoveries;
+		});
+	}
 
 }
