@@ -5,7 +5,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MusesPiazza } from './app.component';
 import { MenuPage } from '../pages/menu/menu';
-import { DiscoverPage } from '../pages/discover/discover';
+import { DiscoveryPage } from '../pages/discovery/discovery';
 import { NotificationPage } from '../pages/notification/notification';
 import { NavigationPage } from '../pages/navigation/navigation';
 import { NavigationDetailsPage } from '../pages/navigation/navigationDetails';
@@ -28,7 +28,7 @@ export function musesPiazzaTranslateLoader(http: Http) {
   declarations: [
     MusesPiazza,
     MenuPage,
-    DiscoverPage,
+    DiscoveryPage,
     NotificationPage,
     NavigationPage,
     NavigationDetailsPage,
@@ -54,7 +54,7 @@ export function musesPiazzaTranslateLoader(http: Http) {
   entryComponents: [
     MusesPiazza,
     MenuPage,
-    DiscoverPage,
+    DiscoveryPage,
     NotificationPage,
     NavigationPage,
     NavigationDetailsPage,

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
-import { DiscoverPage } from '../discover/discover';
+import { DiscoveryPage } from '../discovery/discovery';
 import { NotificationPage } from '../notification/notification';
 import { ContactPage } from '../contact/contact';
 import { NavigationPage } from '../navigation/navigation';
@@ -14,7 +14,7 @@ export class TabsPage {
   // should be each tab's root Page
   HomeRoot: any = HomePage;
   MenuRoot: any = MenuPage;
-  DiscoverRoot:any = DiscoverPage;
+  DiscoveryRoot:any = DiscoveryPage;
   ContactRoot: any = ContactPage;
   NotificationRoot: any = NotificationPage;
   NavigationRoot:any = NavigationPage;

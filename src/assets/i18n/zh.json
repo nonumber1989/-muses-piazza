@@ -10,7 +10,7 @@
     "HOME": {
         "TITLE": "首页"
     },
-    "DISCOVER": {
+    "DISCOVERY": {
         "TITLE": "发现"
     },
     "NOTIFICATION": {
@@ -27,7 +27,7 @@
     },
     "TABS": {
         "HOME": "首页",
-        "DISCOVER": "发现",
+        "DISCOVERY": "发现",
         "NOTIFICATION": "通知",
         "CONFIGURATION": "我的"
     }

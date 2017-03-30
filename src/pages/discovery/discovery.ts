@@ -5,10 +5,10 @@ import { NavController } from 'ionic-angular';
 import { DiscoveryData } from '../../providers/discovery-data';
 
 @Component({
-	selector: 'page-discover',
-	templateUrl: 'discover.html'
+	selector: 'page-discovery',
+	templateUrl: 'discovery.html'
 })
-export class DiscoverPage {
+export class DiscoveryPage {
 	discoveries: any[] = [];
 
 	slides = [

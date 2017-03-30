@@ -10,8 +10,8 @@
     "HOME": {
         "TITLE": "Home"
     },
-    "DISCOVER": {
-        "TITLE": "Discover"
+    "DISCOVERY": {
+        "TITLE": "Discovery"
     },
     "NOTIFICATION": {
         "TITLE": "Notifications",
@@ -27,7 +27,7 @@
     },
     "TABS": {
         "HOME": "Home",
-        "DISCOVER": "Discover",
+        "DISCOVERY": "Discovery",
         "NOTIFICATION": "Notifications",
         "CONFIGURATION": "You"
     }
