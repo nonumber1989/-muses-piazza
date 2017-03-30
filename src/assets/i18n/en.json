@@ -4,7 +4,8 @@
         "SIGNUP": "SignUp",
         "SIGNOUT": "SignOut",
         "USERNAME":"Username",
-        "PASSWORD":"Password"
+        "PASSWORD":"Password",
+        "SEARCH":"Search"
     },
     "HOME": {
         "TITLE": "Home"

@@ -23,7 +23,7 @@ export class ArtifactData {
 	}
 
 	processData(data: any) {
-		this.artifacts = data.json().artifacts;
+		this.artifacts = data.json();
 		return this.artifacts;
 	}
 

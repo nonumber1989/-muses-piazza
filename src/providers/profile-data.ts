@@ -23,7 +23,7 @@ export class ProfileData {
 	}
 
 	processData(data: any) {
-		this.profiles = data.json().profiles;
+		this.profiles = data.json();
 		return this.profiles;
 	}
 
@@ -35,6 +35,10 @@ export class ProfileData {
 				return aName.localeCompare(bName);
 			});
 		});
+	}
+
+	getProfile() {
+		return this.getProfiles()[0];
 	}
 
 }

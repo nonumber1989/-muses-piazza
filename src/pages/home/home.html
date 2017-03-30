@@ -1,8 +1,7 @@
 <ion-header>
     <ion-navbar>
-        <!-- <ion-title>Home</ion-title> -->
         <ion-toolbar color="primary">
-            <ion-searchbar></ion-searchbar>
+            <ion-searchbar placeholder="{{'COMMON.SEARCH' | translate}} "></ion-searchbar>
         </ion-toolbar>
     </ion-navbar>
 </ion-header>
@@ -38,20 +37,19 @@
             </ion-col>
         </ion-row>
     </ion-card>
-
     <ion-fab right bottom>
-        <button ion-fab color="light">
+        <button ion-fab color="secondary">
             <ion-icon name="md-create"></ion-icon>
         </button>
         <ion-fab-list side="top">
-            <button ion-fab color="secondary">
+            <button ion-fab color="light">
                 <ion-icon name="md-images"></ion-icon>
             </button>
             <button ion-fab color="light">
-                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="md-list-box"></ion-icon>
             </button>
-            <button ion-fab color="right">
-                <ion-icon name="logo-vimeo"></ion-icon>
+            <button ion-fab color="light">
+                <ion-icon name="md-help-circle"></ion-icon>
             </button>
         </ion-fab-list>
     </ion-fab>

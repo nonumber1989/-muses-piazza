@@ -15,7 +15,7 @@
     <form #signupForm="ngForm" novalidate>
         <ion-list no-lines>
             <ion-item>
-                <ion-label stacked color="primary">Username</ion-label>
+                <ion-label stacked color="primary">{{ 'COMMON.USERNAME' | translate }}</ion-label>
                 <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
                 </ion-input>
             </ion-item>
@@ -23,7 +23,7 @@
                 Username is required
             </p>
             <ion-item>
-                <ion-label stacked color="primary">Password</ion-label>
+                <ion-label stacked color="primary">{{ 'COMMON.PASSWORD' | translate }}</ion-label>
                 <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
                 </ion-input>
             </ion-item>
@@ -32,7 +32,7 @@
             </p>
         </ion-list>
         <div padding>
-            <button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+            <button ion-button (click)="onSignup(signupForm)" type="submit" block>{{ 'COMMON.SIGNUP' | translate }}</button>
         </div>
     </form>
 </ion-content>
