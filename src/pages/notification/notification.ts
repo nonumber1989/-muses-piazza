@@ -3,6 +3,8 @@ import { Component, Input } from '@angular/core';
 import { ImagePicker } from 'ionic-native';
 import { NavController } from 'ionic-angular';
 
+import 'caman/dist/caman.full.min.js';
+
 import { NotificationData } from '../../providers/notification-data';
 
 @Component({
@@ -20,14 +22,13 @@ export class NotificationPage {
   constructor(
     public navCtrl: NavController,
     public notificationData: NotificationData
-    ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.notification = 'message';
     this.notificationData.getNotifications().subscribe((notifications: any[]) => {
       this.notifications = notifications;
     });
-
   }
 
   swithNotification() {
@@ -44,7 +45,6 @@ export class NotificationPage {
       console.log('the err: ' + err);
     });
   }
-
 
 }
 

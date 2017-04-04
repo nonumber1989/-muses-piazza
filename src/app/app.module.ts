@@ -19,7 +19,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ArtifactData } from '../providers/artifact-data';
 import { ProfileData } from '../providers/profile-data';
 import { DiscoveryData } from '../providers/discovery-data';
-import { NotifcationData } from '../providers/notifcation-data';
+import { NotificationData } from '../providers/notification-data';
 
 export function musesPiazzaTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -71,7 +71,7 @@ export function musesPiazzaTranslateLoader(http: Http) {
     ArtifactData,
     ProfileData,
     DiscoveryData,
-    NotifcationData
+    NotificationData
   ]
 })
 export class AppModule { }
