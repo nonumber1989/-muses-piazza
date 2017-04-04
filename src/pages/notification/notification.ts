@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 
 import { ImagePicker } from 'ionic-native';
 import { NavController } from 'ionic-angular';
@@ -9,8 +9,15 @@ import { NavController } from 'ionic-angular';
 })
 export class NotificationPage {
 
+  @Input() imgs: string[];
+  notification: string;
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  ionViewDidLoad() {
+    this.notification = 'message';
   }
 
   swithNotification() {
@@ -22,6 +29,7 @@ export class NotificationPage {
   for (var i = 0; i < results.length; i++) {
       console.log('Image URI: ' + results[i]);
      }
+     this.imgs = results;
     }, (err) => { 
     console.log('the err: ' + err);
     });  

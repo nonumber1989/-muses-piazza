@@ -1,18 +1,14 @@
 <ion-header>
-    <ion-navbar no-border-bottom>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-segment [(ngModel)]="notification" (ionChange)="swithNotification()">
-            <ion-segment-button value="message">
-                {{ 'NOTIFICATION.MESSAGE' | translate }}
-            </ion-segment-button>
-            <ion-segment-button value="following">
-                {{ 'NOTIFICATION.FOLLOWING' | translate }}
-            </ion-segment-button>
-        </ion-segment>
-    </ion-navbar>
+    <ion-segment [(ngModel)]="notification" (ionChange)="swithNotification()">
+        <ion-segment-button value="message">
+            {{ 'NOTIFICATION.MESSAGE' | translate }}
+        </ion-segment-button>
+        <ion-segment-button value="following">
+            {{ 'NOTIFICATION.FOLLOWING' | translate }}
+        </ion-segment-button>
+    </ion-segment>
 </ion-header>
+
 <ion-content [ngSwitch]="notification">
     <ion-list *ngSwitchCase="'message'">
         <ion-item>
@@ -22,6 +18,10 @@
             <h2>Ruby</h2>
         </ion-item>
         <button ion-button color="danger" (click)="test()">Danger</button>
+        <div *ngFor="let img of imgs">
+            <img [src]="img" />
+        </div>
+        
     </ion-list>
     <ion-list *ngSwitchCase="'following'">
         <ion-item-sliding>
