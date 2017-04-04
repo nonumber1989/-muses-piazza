@@ -20,14 +20,13 @@ export class NotificationPage {
   constructor(
     public navCtrl: NavController,
     public notificationData: NotificationData
-    ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.notification = 'message';
     this.notificationData.getNotifications().subscribe((notifications: any[]) => {
       this.notifications = notifications;
     });
-
   }
 
   swithNotification() {
@@ -44,7 +43,6 @@ export class NotificationPage {
       console.log('the err: ' + err);
     });
   }
-
 
 }
 
