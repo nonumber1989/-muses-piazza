@@ -19,6 +19,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ArtifactData } from '../providers/artifact-data';
 import { ProfileData } from '../providers/profile-data';
 import { DiscoveryData } from '../providers/discovery-data';
+import { NotifcationData } from '../providers/notifcation-data';
 
 export function musesPiazzaTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -69,7 +70,8 @@ export function musesPiazzaTranslateLoader(http: Http) {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ArtifactData,
     ProfileData,
-    DiscoveryData
+    DiscoveryData,
+    NotifcationData
   ]
 })
 export class AppModule { }
