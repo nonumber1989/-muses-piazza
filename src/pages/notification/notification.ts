@@ -3,7 +3,6 @@ import { Component, Input } from '@angular/core';
 import { ImagePicker } from 'ionic-native';
 import { NavController } from 'ionic-angular';
 
-import 'caman/dist/caman.full.min.js';
 
 import { NotificationData } from '../../providers/notification-data';
 
