@@ -40,18 +40,18 @@
             </ion-col>
         </ion-row>
     </ion-card>
-    <ion-fab right bottom>
+    <ion-fab right bottom #fabContainer>
         <button ion-fab color="secondary">
             <ion-icon name="md-create"></ion-icon>
         </button>
         <ion-fab-list side="top">
-            <button ion-fab color="light">
+            <button ion-fab color="light" (click)="openSocial('images', fabContainer)">
                 <ion-icon name="md-images"></ion-icon>
             </button>
-            <button ion-fab color="light">
+            <button ion-fab color="light" (click)="openSocial('articles', fabContainer)">
                 <ion-icon name="md-list-box"></ion-icon>
             </button>
-            <button ion-fab color="light">
+            <button ion-fab color="light" (click)="openSocial('help', fabContainer)">
                 <ion-icon name="md-help-circle"></ion-icon>
             </button>
         </ion-fab-list>

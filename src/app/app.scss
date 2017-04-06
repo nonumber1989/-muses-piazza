@@ -22,3 +22,12 @@ ion-card img {
     display: block;
     margin: auto;
 }
+
+ion-card canvas {
+    display: block;
+    margin: auto;
+    max-width:100%;
+    width:100% !important;
+    height:inherit !important;
+    border:0
+}

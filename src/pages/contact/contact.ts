@@ -11,12 +11,16 @@ declare var Caman: any;
 export class ContactPage {
 
 	@ViewChild('mapCanvas') mapElement: ElementRef;
-	constructor(public navCtrl: NavController) {}
+	constructor(public navCtrl: NavController) { }
 
-	ionViewDidLoad() { 
+	ionViewDidLoad() {
 		let theEle = this.mapElement.nativeElement;
 		Caman('#map_canvas', function() {
-			this.brightness(50).render();
+		    // this.brightness(50);
+		    // this.contrast(30);
+		    this.sepia(60);
+		    // this.saturation(-30);
+		    this.render();
 		});
 	}
 
