@@ -7,7 +7,13 @@
 </ion-header>
 <ion-content>
     <ion-card>
-        <img src="assets/img/card-saopaolo.png" #mapCanvas id="map_canvas"/>
+        <button ion-button outline (click)="generateBarcode()">Primary Outline</button>
+        <div>
+            {{barcode | json}}
+        </div>
+    </ion-card>
+    <ion-card>
+        <img src="assets/img/card-saopaolo.png" #mapCanvas id="map_canvas" />
         <div class="card-title">São Paulo</div>
         <div class="card-subtitle">41 Listings</div>
     </ion-card>

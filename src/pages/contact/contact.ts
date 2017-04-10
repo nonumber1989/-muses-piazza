@@ -1,6 +1,6 @@
 import { Component, Input,ViewChild, ElementRef } from '@angular/core';
 
-// import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { NavController } from 'ionic-angular';
 
@@ -15,7 +15,7 @@ export class ContactPage {
    @Input() barcode: string;
 
 	@ViewChild('mapCanvas') mapElement: ElementRef;
-	constructor(public navCtrl: NavController) { }
+	constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner) { }
 
 	ionViewDidLoad() {
 		let theEle = this.mapElement.nativeElement;
@@ -28,13 +28,13 @@ export class ContactPage {
 		});
 	}
 
-	// generateBarcode() {
-	// 	this.barcodeScanner.scan().then((theBarcode) => {
-	// 		this.barcode = theBarcode;
-	// 	}, (err) => {
-	// 		// An error occurred
-	// 	});
-	// }
+	generateBarcode() {
+		this.barcodeScanner.scan().then((theBarcode) => {
+			this.barcode = theBarcode;
+		}, (err) => {
+			// An error occurred
+		});
+	}
 
 
 }

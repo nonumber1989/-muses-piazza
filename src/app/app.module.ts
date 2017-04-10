@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MusesPiazza } from './app.component';
@@ -68,6 +69,7 @@ export function musesPiazzaTranslateLoader(http: Http) {
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    BarcodeScanner,
     ArtifactData,
     ProfileData,
     DiscoveryData,
